@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writeup on S4D&#39;s Blog</title>
+    <link>https://saddean.github.io/blogs/tags/writeup/</link>
+    <description>Recent content in Writeup on S4D&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Jan 2019 18:04:50 +0700</lastBuildDate>
+    
+	<atom:link href="https://saddean.github.io/blogs/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[knock.xss.moe] XSS CHALLENGE</title>
+      <link>https://saddean.github.io/blogs/post/knock-xss/</link>
+      <pubDate>Sun, 06 Jan 2019 18:04:50 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/knock-xss/</guid>
+      <description>XSS:
+Cross-Site Scripting (XSS) là một trong những kĩ thuật tấn công phổ biến nhất hiên nay, đồng thời nó cũng là một trong những vấn đề bảo mật quan trọng đối với các nhà phát triển web và cả những người sử dụng web. Bất kì một website nào cho phép người sử dụng đăng thông tin mà không có sự kiểm tra chặt chẽ các đoạn mã nguy hiểm thì đều có thể tiềm ẩn các lỗi XSS.</description>
+    </item>
+    
+    <item>
+      <title>[root-me.org] XSS CHALLENGE</title>
+      <link>https://saddean.github.io/blogs/post/rootme-xss/</link>
+      <pubDate>Tue, 04 Dec 2018 09:30:14 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/rootme-xss/</guid>
+      <description>LIST OF CHALLGENGE    ID Challgenge Done     1 XSS - Stored 1 ✅   2 XSS - Stored 2 ✅   3 XSS - Reflected ✅   4 XSS - Stored - filter bypass ❌   5 XSS - DOM Based ❌    
+XSS - Stored 1  Link : http://challenge01.root-me.org/web-client/ch18/ Vulnerablity : Input Message Payload : &amp;lt;img src=0 onerror=document.</description>
+    </item>
+    
+  </channel>
+</rss>

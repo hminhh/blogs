@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on S4D&#39;s Blog</title>
+    <link>https://saddean.github.io/blogs/tags/</link>
+    <description>Recent content in Tags on S4D&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Jan 2019 20:02:08 +0700</lastBuildDate>
+    
+	<atom:link href="https://saddean.github.io/blogs/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ctf</title>
+      <link>https://saddean.github.io/blogs/tags/ctf/</link>
+      <pubDate>Wed, 30 Jan 2019 20:02:08 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hackthebox.eu</title>
+      <link>https://saddean.github.io/blogs/tags/hackthebox.eu/</link>
+      <pubDate>Sat, 19 Jan 2019 09:13:54 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/tags/hackthebox.eu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://saddean.github.io/blogs/tags/javascript/</link>
+      <pubDate>Thu, 24 Jan 2019 18:26:14 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Knock.xss.moe</title>
+      <link>https://saddean.github.io/blogs/tags/knock.xss.moe/</link>
+      <pubDate>Sun, 06 Jan 2019 18:04:50 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/tags/knock.xss.moe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>https://saddean.github.io/blogs/tags/php/</link>
+      <pubDate>Wed, 30 Jan 2019 20:02:08 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Root Me.org</title>
+      <link>https://saddean.github.io/blogs/tags/root-me.org/</link>
+      <pubDate>Wed, 30 Jan 2019 20:02:08 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/tags/root-me.org/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rootme</title>
+      <link>https://saddean.github.io/blogs/tags/rootme/</link>
+      <pubDate>Tue, 04 Dec 2018 09:30:14 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/tags/rootme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writeup</title>
+      <link>https://saddean.github.io/blogs/tags/writeup/</link>
+      <pubDate>Sun, 06 Jan 2019 18:04:50 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/tags/writeup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xss</title>
+      <link>https://saddean.github.io/blogs/tags/xss/</link>
+      <pubDate>Sun, 06 Jan 2019 18:04:50 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/tags/xss/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

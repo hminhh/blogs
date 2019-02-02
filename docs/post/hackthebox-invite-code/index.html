@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content="[hackthebox.eu] Hackthebox Invite Code">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-01-19">
+    
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://saddean.github.io/blogs/post/hackthebox-invite-code/">
+    <meta property="og:site_name" content="S4D&#39;s Blog">
+    
+    <meta property="og:tags" content="hackthebox.eu">
+    
+    <meta name="generator" content="Hugo 0.52" />
+    <title>[hackthebox.eu] Hackthebox Invite Code &middot; S4D&#39;s Blog</title>
+    
+    <link rel="stylesheet" href="https://saddean.github.io/blogs/css/monokai-sublime.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://saddean.github.io/blogs/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    
+    <link href="https://saddean.github.io/blogs/index.xml" rel="alternate" type="application/rss+xml" title="S4D&#39;s Blog" />
+    
+    
+    <link rel="icon" href="https://saddean.github.io/blogs/icon.ico" />
+    
+
+    
+    
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://saddean.github.io/blogs/">$4D</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://saddean.github.io/blogs/about">About</a></li>
+				
+					<li><a href="https://saddean.github.io/blogs/">Blog</a></li>
+				
+					<li><a href="https://saddean.github.io/blogs/tags/">Category</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-2 col-md-2">
+	<div id="menu-content" class="vertical-align">
+		
+			<h2 class="text-center rainbox-text shake-opacity"><a href="https://saddean.github.io/blogs/">$4D</a></h2>
+		
+		
+		
+			<small class="text-center center-block">🚀 Người đi ra ngoài vũ trụ 🚀</small>
+		
+		
+		
+			<img id="profile-pic" src="https://saddean.github.io/blogs//img/profile.jpg" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			
+				<a href="https://github.com/saddean"><i class="shake-opacity fa fa-github fa-3x"></i></a>
+			
+				<a href="https://twitter.com/ttuongann"><i class="shake-opacity fa fa-twitter fa-3x"></i></a>
+			
+				<a href="https://facebook.com/ttuongann"><i class="shake-opacity fa fa-facebook fa-3x"></i></a>
+			
+
+			
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://saddean.github.io/blogs/about">About</a>
+			
+				<a href="https://saddean.github.io/blogs/">Blog</a>
+			
+				<a href="https://saddean.github.io/blogs/tags/">Category</a>
+			
+		</div>
+	</div>
+</div>
+
+		<div id="content" class="col-xs-12 col-sm-8 col-md-10">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-9">
+
+<main>
+	<header>
+		<h1 class="title-h1">[hackthebox.eu] Hackthebox Invite Code</h1>
+		<div>
+			Published on: <i class="hg-muted">19 January 2019</i>
+		</div>
+		<div>
+			<i>Tags:</i>
+			<small class="text-muted">
+				
+				
+				<a href="https://saddean.github.io/blogs/tags/hackthebox.eu"><span class="label btn-warning shake-opacity">hackthebox.eu</span></a>
+				
+			</small>
+		</div>
+	</header>
+
+	<article>
+		<hr />
+
+<p><img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/invi1.jpg" class="img-responsive"></p>
+
+<p>Một số cty nước ngoài kiếm email phỏng vấn cũng bằng cách này, thường chỉ khai thác ở client , nên cứ bem theo <code>view-source</code> mà chơi thôi 🤞Tuy vậy HTB có một vài
+thủ thuật <em>gài</em> (mặc dù k đáng kể) như để canvas để chuột phải ko thể view-source hoặc view-source được thì đã minify cho xấu đi =)))</p>
+
+<p><img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/invi2.jpg" class="img-responsive"></p>
+
+<p>Có hai file JS đáng nghi vấn, mở lên xem thử:</p>
+
+<p><code>https://www.hackthebox.eu/js/calm.js</code></p>
+
+<pre><code class="language-javascript">console.log(`%c
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+.                                                                                 .
+.                      uuuuuuu                                                    .
+.                  uu$$$$$$$$$$$uu                                                .
+.               uu$$$$$$$$$$$$$$$$$uu                                             .
+.              u$$$$$$$$$$$$$$$$$$$$$u                                            .
+.             u$$$$$$$$$$$$$$$$$$$$$$$u                                           .
+.            u$$$$$$$$$$$$$$$$$$$$$$$$$u                   K E E P  C A L M       .
+.            u$$$$$$$$$$$$$$$$$$$$$$$$$u                                          .
+.            u$$$$$$&quot;   &quot;$$$&quot;   &quot;$$$$$$u                        A N D             .
+.            &quot;$$$$&quot;      u$u       $$$$&quot;                                          .
+.             $$$u       u$u       u$$$                        H A C K            .
+.             $$$u      u$$$u      u$$$                                           .
+.              &quot;$$$$uu$$$   $$$uu$$$$&quot;                         T H I S            .
+.               &quot;$$$$$$$&quot;   &quot;$$$$$$$&quot;                                             .
+.                 u$$$$$$$u$$$$$$$u                             B O X             .
+.                  u$&quot;$&quot;$&quot;$&quot;$&quot;$&quot;$u                                                .
+.       uuu        $$u$ $ $ $ $u$$       uuu                                      .
+.      u$$$$        $$$$$u$u$u$$$       u$$$$                                     .
+.       $$$$$uu      &quot;$$$$$$$$$&quot;     uu$$$$$$                                     .
+.     u$$$$$$$$$$$uu    &quot;&quot;&quot;&quot;&quot;    uuuu$$$$$$$$$$                                   .
+.     $$$$&quot;&quot;&quot;$$$$$$$$$$uuu   uu$$$$$$$$$&quot;&quot;&quot;$$$&quot;                                   .
+.      &quot;&quot;&quot;      &quot;&quot;$$$$$$$$$$$uu &quot;&quot;$&quot;&quot;&quot;                                            .
+.                uuuu &quot;&quot;$$$$$$$$$$uuu                                             .
+.       u$$$uuu$$$$$$$$$uu &quot;&quot;$$$$$$$$$$$uuu$$$                                    .
+.       $$$$$$$$$$&quot;&quot;&quot;&quot;           &quot;&quot;$$$$$$$$$$$&quot;           HackTheBox v0.9.3       .
+.        &quot;$$$$$&quot;                      &quot;&quot;$$$$&quot;&quot;           info@hackthebox.eu       .
+.          $$$&quot;                         $$$$&quot;                                     .
+.                                                                                 .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .`,&quot;color:#9acc14; background:black; font-family: monospace&quot;);
+</code></pre>
+
+<p>Đơn giản file này chỉ là <code>console.log</code> ra cho màu nè đầu lâu thôi 💀</p>
+
+<p>Ngược lại file này đáng nghi hơn <code>https://www.hackthebox.eu/js/inviteapi.min.js</code></p>
+
+<pre><code class="language-javascript">eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1 i(4){h 8={&quot;4&quot;:4};$.9({a:&quot;7&quot;,5:&quot;6&quot;,g:8,b:\'/d/e/n\',c:1(0){3.2(0)},f:1(0){3.2(0)}})}1 j(){$.9({a:&quot;7&quot;,5:&quot;6&quot;,b:\'/d/e/k/l/m\',c:1(0){3.2(0)},f:1(0){3.2(0)}})}',24,24,'response|function|log|console|code|dataType|json|POST|formData|ajax|type|url|success|api|invite|error|data|var|verifyInviteCode|makeInviteCode|how|to|generate|verify'.split('|'),0,{}))
+</code></pre>
+
+<p>Thứ nhất code đã bị <code>obfuscation</code> và minify, tuy nhiên bạn hãy để ý hàm <code>eval</code> kia sẽ thực thi đoạn script bên trong, cụ thể hơn hàm eval này chạy sẽ tạo ra 1 đoạn code bình thường.Bỏ hàm eval và pretty lại code</p>
+
+<pre><code class="language-javascript">(function(p, a, c, k, e, d) {
+    e = function(c) {
+        return c.toString(36)
+    };
+    if (!''.replace(/^/, String)) {
+        while (c--) {
+            d[c.toString(a)] = k[c] || c.toString(a)
+        }
+        k = [function(e) {
+            return d[e]
+        }];
+        e = function() {
+            return '\\w+'
+        };
+        c = 1
+    };
+    while (c--) {
+        if (k[c]) {
+            p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+        }
+    }
+    return p
+}('1 i(4){h 8={&quot;4&quot;:4};$.9({a:&quot;7&quot;,5:&quot;6&quot;,g:8,b:\'/d/e/n\',c:1(0){3.2(0)},f:1(0){3.2(0)}})}1 j(){$.9({a:&quot;7&quot;,5:&quot;6&quot;,b:\'/d/e/k/l/m\',c:1(0){3.2(0)},f:1(0){3.2(0)}})}', 24, 24, 'response|function|log|console|code|dataType|json|POST|formData|ajax|type|url|success|api|invite|error|data|var|verifyInviteCode|makeInviteCode|how|to|generate|verify'.split('|'), 0, {}))
+</code></pre>
+
+<p>Chạy luôn trong Chorme Dev-Tool là ra kết quả
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/invi3.jpg" class="img-responsive"></p>
+
+<pre><code class="language-javascript">function verifyInviteCode(code) {
+    var formData = {
+        &quot;code&quot;: code
+    };
+    $.ajax({
+        type: &quot;POST&quot;,
+        dataType: &quot;json&quot;,
+        data: formData,
+        url: '/api/invite/verify',
+        success: function(response) {
+            console.log(response)
+        },
+        error: function(response) {
+            console.log(response)
+        }
+    })
+}
+
+function makeInviteCode() {
+    $.ajax({
+        type: &quot;POST&quot;,
+        dataType: &quot;json&quot;,
+        url: '/api/invite/how/to/generate',
+        success: function(response) {
+            console.log(response)
+        },
+        error: function(response) {
+            console.log(response)
+        }
+    })
+}
+</code></pre>
+
+<p>Đến đây nhìn vô là biết <code>ajax</code> để gọi đến các api get code. Dùng <code>postman</code> gọi đển theo phương thức POST <code>https://www.hackthebox.eu/api/invite/how/to/generate</code></p>
+
+<p><img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/invi4.jpg" class="img-responsive"></p>
+
+<pre><code class="language-javascript">    atob(&quot;SW4gb3JkZXIgdG8gZ2VuZXJhdGUgdGhlIGludml0ZSBjb2RlLCBtYWtlIGEgUE9TVCByZXF1ZXN0IHRvIC9hcGkvaW52aXRlL2dlbmVyYXRl&quot;)
+    // &quot;In order to generate the invite code, make a POST request to /api/invite/generate&quot;
+</code></pre>
+
+<p>Theo gợi ý, tiếp tục gọi đển theo phương thức POST <code>https://www.hackthebox.eu/api/invite/generate</code></p>
+
+<p><img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/invi5.jpg" class="img-responsive"></p>
+
+<pre><code class="language-javascript">    atob(&quot;QVpUU0EtSkJZUk8tQlpXUVYtV1VaTkYtVlJITVQ&quot;)
+    //&quot;AZTSA-JBYRO-BZWQV-WUZNF-VRHMT&quot;
+</code></pre>
+
+<p>Đến đây là code code rồi, submit rồi reg acc vào chiến thôi!!
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/invi6.jpg" class="img-responsive"></p>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://saddean.github.io/blogs/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "myblog-wqnng8opme" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-130213932-1', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/saddean.github.io\/blogs\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+  <script src="https://saddean.github.io/blogs//js/App.js"></script>
+  
+</body>
+</html>

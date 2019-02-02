@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content="[hackthebox.eu] Web Challenge">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-01-15">
+    
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://saddean.github.io/blogs/post/hackthebox-web-challege/">
+    <meta property="og:site_name" content="S4D&#39;s Blog">
+    
+    <meta property="og:tags" content="CTF">
+    
+    <meta property="og:tags" content="hackthebox.eu">
+    
+    <meta name="generator" content="Hugo 0.52" />
+    <title>[hackthebox.eu] Web Challenge &middot; S4D&#39;s Blog</title>
+    
+    <link rel="stylesheet" href="https://saddean.github.io/blogs/css/monokai-sublime.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://saddean.github.io/blogs/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    
+    <link href="https://saddean.github.io/blogs/index.xml" rel="alternate" type="application/rss+xml" title="S4D&#39;s Blog" />
+    
+    
+    <link rel="icon" href="https://saddean.github.io/blogs/icon.ico" />
+    
+
+    
+    
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://saddean.github.io/blogs/">$4D</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://saddean.github.io/blogs/about">About</a></li>
+				
+					<li><a href="https://saddean.github.io/blogs/">Blog</a></li>
+				
+					<li><a href="https://saddean.github.io/blogs/tags/">Category</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-2 col-md-2">
+	<div id="menu-content" class="vertical-align">
+		
+			<h2 class="text-center rainbox-text shake-opacity"><a href="https://saddean.github.io/blogs/">$4D</a></h2>
+		
+		
+		
+			<small class="text-center center-block">🚀 Người đi ra ngoài vũ trụ 🚀</small>
+		
+		
+		
+			<img id="profile-pic" src="https://saddean.github.io/blogs//img/profile.jpg" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			
+				<a href="https://github.com/saddean"><i class="shake-opacity fa fa-github fa-3x"></i></a>
+			
+				<a href="https://twitter.com/ttuongann"><i class="shake-opacity fa fa-twitter fa-3x"></i></a>
+			
+				<a href="https://facebook.com/ttuongann"><i class="shake-opacity fa fa-facebook fa-3x"></i></a>
+			
+
+			
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://saddean.github.io/blogs/about">About</a>
+			
+				<a href="https://saddean.github.io/blogs/">Blog</a>
+			
+				<a href="https://saddean.github.io/blogs/tags/">Category</a>
+			
+		</div>
+	</div>
+</div>
+
+		<div id="content" class="col-xs-12 col-sm-8 col-md-10">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-9">
+
+<main>
+	<header>
+		<h1 class="title-h1">[hackthebox.eu] Web Challenge</h1>
+		<div>
+			Published on: <i class="hg-muted">15 January 2019</i>
+		</div>
+		<div>
+			<i>Tags:</i>
+			<small class="text-muted">
+				
+				
+				<a href="https://saddean.github.io/blogs/tags/ctf"><span class="label btn-warning shake-opacity">CTF</span></a>
+				
+				<a href="https://saddean.github.io/blogs/tags/hackthebox.eu"><span class="label btn-warning shake-opacity">hackthebox.eu</span></a>
+				
+			</small>
+		</div>
+	</header>
+
+	<article>
+		
+
+<hr />
+
+<h1 id="list-of-challage">#.LIST OF CHALLAGE</h1>
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Challgenge</th>
+<th>Done</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><a href="#1"><strong>[30 Points] HDC</strong></a></td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td><strong>2</strong></td>
+<td><a href="#2"><strong>[50 Points] I know Mag1k</strong></a></td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td><strong>3</strong></td>
+<td><a href="#3"><strong>[70 Points] Grammar</strong></a></td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td><strong>4</strong></td>
+<td><a href="#4"><strong>[20 Points] Lernaean</strong></a></td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td><strong>5</strong></td>
+<td><a href="#5"><strong>[30 Points] Cartographer</strong></a></td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p><a name="1"></a></p>
+
+<h1 id="1-hdc-by-thiseas">1.HDC [by Thiseas]</h1>
+
+<blockquote>
+<p><strong>Description</strong> : We believe a certain individual uses this website for shady business. Can you find out who that is and send him an email to check, using the web site&rsquo;s functionality? Note: The flag is not an e-mail address.</p>
+</blockquote>
+
+<p>Mở đầu Chall là hai ô input nhập vào username/password
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/hdc1.jpg" class="img-responsive">
+Tuy nhiên khi view-source thì thấy 2 input type <code>hidden</code> 👀 khá đáng ngờ , check tiếp hàm <code>doProcess()</code> trong <code>myscript.js</code>
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/hdc3.jpg" class="img-responsive">
+Chả có gì đặc biệt&hellip;Chỉ là hàm submit form bình thường , loay hoay debug bằng <code>DevTools</code> cũng chưa thấy gì đặc biệt.
+Lúc này có hai ô input type <code>hidden</code> check các kiểu thì thấy form k sử dụng 2 thằng này, mò một hồi thì thấy trong lib jquery có 1 hàm
+<code>doProcess()</code> nữa
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/hdc4.jpg" class="img-responsive">
+Sử dụng username/password được set trong hàm này submit form thì login thành công ^^
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/hdc2.jpg" class="img-responsive">
+Bấm lung tung một hồi cũng chưa kiếm được cái mail chall yêu cầu, check lại burpsuite thì thấy có link lạ <code>/main/secret_area_/</code>.
+Mở ra thì có <code>mail.txt</code>. Lúc này k phải 1 mail nữa mà là cả 18 cái mail để test :| Không thích lắm nhưng bruteforce thôi.
+Tiến thành bruteforce bằng form gửi mail, setup với burpsuite cho lẹ khỏi phải code :D
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/hd5.jpg" class="img-responsive">
+DONE! Có Flag submit!!</p>
+
+<hr />
+
+<p><a name="2"></a></p>
+
+<h1 id="2-i-know-mag1k-by-rkmylo">2.I know Mag1k [by rkmylo]</h1>
+
+<blockquote>
+<p><strong>Description</strong> : Can you get to the profile page of the admin?</p>
+</blockquote>
+
+<p><img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Mag1k1.jpg" class="img-responsive">
+Mới vào chall mình ngộp hẳn :| mình k có kinh nghiệm mấy trong khai thác <code>sqlinjection</code> lắm, đc hint từ một người bạn thì mình biết
+bài này dạng <code>decrypt</code> và sử dụng <code>padbuster</code>.<br>
+Tạo một acc rồi login vào xem cookie của trang cấp là gì
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Mag1k2.jpg" class="img-responsive">
+Ok tìm ra cookie có tên là <code>iknowmag1k</code>
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Mag1k3.jpg" class="img-responsive">
+Có hint rồi là dùng luôn <code>padbuster</code> rồi thì chơi thôi :D
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Mag1k4.jpg" class="img-responsive">
+:) đệt quá trình lâu hơn mình nghĩ cuối cùng cũng decrypt ra đc session</p>
+
+<pre><code class="language-json">{&quot;user&quot;:&quot;admin&quot;,&quot;role&quot;:&quot;user&quot;}
+</code></pre>
+
+<p>Tiến hành dùng <code>padbuster</code> một lần nữa để tạo ra session fake <code>{&quot;user&quot;:&quot;admin&quot;,&quot;role&quot;:&quot;admin&quot;}</code> (username mình tạo là admin nhé ^^)
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/mag1k5.jpg" class="img-responsive"></p>
+
+<ul>
+<li><strong>Note</strong>: <a href="https://www.owasp.org/index.php/Testing_for_Padding_Oracle_(OTG-CRYPST-002)">Padding Oracle Attacks</a></li>
+</ul>
+
+<hr />
+
+<p><a name="3"></a></p>
+
+<h1 id="3-grammar-by-forgp">3.Grammar [by forGP]</h1>
+
+<blockquote>
+<p><strong>Description</strong> : When we access this page we get a Forbidden error. However we believe that something strange lies behind&hellip; Can you find a way in and retrieve the flag?</p>
+</blockquote>
+
+<p>Dựa vào gợi ý và kinh nghiệm chơi khi thấy đầu chall và hint là <code>Forbidden error</code> thì nghĩ ngay đến đổi method của request
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Grammar0.jpg" class="img-responsive">
+Bằng một số biện pháp fuzz nhẹ thì phát hiện trang <code>index.php</code>, đổi method thành <code>POST</code> và pass thành công
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Grammar3.jpg" class="img-responsive">
+Trang này cũng k có gì đặc biệt , thử submit form cũng ko có gì thay đổi
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Grammar1.jpg" class="img-responsive">
+Lướt sơ vô session, thì thấy tên session khá lạ, thường session của PHP thường là <code>PHPSESSID</code> mà ở đây lại là <code>ses</code> 🍌
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Grammar2.jpg" class="img-responsive">
+basecode64 thôi</p>
+
+<pre><code class="language-javascript">&quot;eyJVc2VyIjoic2FkZGVhbiIsIkFkbWluIjoiRmFsc2UiLCJNQUMiOiI0NjFiOWUwNGRmOTQwY2NlMWUyMDhlMjNiOTFjYzAxYSJ9==&quot;
+//output: {&quot;User&quot;:&quot;saddean&quot;,&quot;Admin&quot;:&quot;False&quot;,&quot;MAC&quot;:&quot;461b9e04df940cce1e208e23b91cc01a&quot;}
+
+//change json: `{&quot;User&quot;:&quot;saddean&quot;,&quot;Admin&quot;:&quot;True&quot;,&quot;MAC&quot;:&quot;461b9e04df940cce1e208e23b91cc01a&quot;}`
+&quot;eyJVc2VyIjoic2FkZGVhbiIsIkFkbWluIjoiVHJ1ZSIsIk1BQyI6IjQ2MWI5ZTA0ZGY5NDBjY2UxZTIwOGUyM2I5MWNjMDFhIn0=&quot;
+</code></pre>
+
+<p>Đời không như mơ 😂
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Grammar4.jpg" class="img-responsive">
+Nhìn thoáng thì trong đoạn decode còn 1 tham số MAC, chắc có vẻ dùng để matching với server, Nếu ai hay viết API cho <code>ReactJS</code> thì chắc ko lạ gì với cái này nữa.
+Cụ thể <code>MAC</code> kia giống như một <code>integrity key</code> để kiểm tra tính đúng đắn của json, khó để mà tạo lại cái <code>MAC</code> đó vì có thể có <code>secret key</code>&hellip;.Tuy nhiên với một người theo chủ nghĩa ko thích <code>PHP</code>
+như mình vì nó đôi khi có một số lỗi rất kì lạ nên mình tìm thử lỗi bypass nó.<br>
+&ndash; Sau quá trình search thì mình thấy có slide này khá hữu ích <a href="https://hydrasky.com/network-security/php-string-comparison-vulnerabilities/">LINK1</a> <a href="https://www.owasp.org/images/6/6b/PHPMagicTricks-TypeJuggling.pdf">LINK2</a></p>
+
+<p>Cụ thể: Nếu bạn nhìn kỹ MAC đang là dạng <code>String</code>, có thể trong source code đang dùng hàm stcmp hoặc == để so sánh. Một ví dụ nhỏ:</p>
+
+<pre><code class="language-php">    TRUE: “0000” == int(0)
+    TRUE: “0e12” == int(0)
+    TRUE: “1abc” == int(1)
+    TRUE: “0abc” == int(0)
+    TRUE: “abc” == int(0)       --&gt; LỖI XUẤT PHÁT CHỖ NÀY NÈ MẤY BẠN
+--------------------------------------------------------------------
+    &quot;7a5c2...45dsd&quot; == int(7)
+    &quot;68f66...8dsdw&quot; == int(68)
+    &quot;092dcs...54de3&quot; == int(92)
+    --&gt; Có thể đoán và pass được hash_mac dựa vào số đầu
+</code></pre>
+
+<p>Giải thích đơn giải đây là lỗi so sánh giữ String và Int. Với trường hợp bài này, thì các bạn nhìn thấy <code>MAC</code> trong json là kiểu <code>String</code> áp dụng thay đổi MAC bằng <code>0</code> kiểu Int thôi</p>
+
+<pre><code class="language-php">{&quot;User&quot;:&quot;saddean&quot;,&quot;Admin&quot;:&quot;True&quot;,&quot;MAC&quot;:0}
+//output basecode64: eyJVc2VyIjoic2FkZGVhbiIsIkFkbWluIjoiVHJ1ZSIsIk1BQyI6MH0=
+</code></pre>
+
+<p>Tiến hành request lên bằng session mới hoii, kết quả thu được flag
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Grammar5.jpg" class="img-responsive"></p>
+
+<hr />
+
+<p><a name="4"></a></p>
+
+<h1 id="4-lernaean-by-arrexel">4.Lernaean [by Arrexel]</h1>
+
+<blockquote>
+<p><strong>Description</strong> : Your target is not very good with computers. Try and guess their password to see if they may be hiding anything!</p>
+</blockquote>
+
+<p>Mới vô chall thì mình nghĩ là <code>sqlinjection</code> để bypass auth, sau một hồi test thì bị cuốn vô injection cả tiếng mãi ko ra 🤣😂 Bình tĩnh view-source thì thấy vài câu nói có vẻ là hint <code>Please do not try to guess my password!</code>. Brute-force thôi, recommend sử dụng seclist top 1000 là đủ rồi. <a href="https://github.com/danielmiessler/SecLists/blob/master/Passwords/darkweb2017-top1000.txt">LINK</a> &ndash;&gt; chờ đợi ra pass thôi.<br>
+Nhập pass và 💣:<br>
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Lernaean1.jpg" class="img-responsive">
+<br>
+Ez , tắt javascript trên browser đi thôi :D <br>
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/Lernaean2.jpg" class="img-responsive"></p>
+
+<hr />
+
+<p><a name="5"></a></p>
+
+<h1 id="5-cartographer-by-arrexel">5.Cartographer [by Arrexel]</h1>
+
+<blockquote>
+<p><strong>Description</strong> : Some underground hackers are developing a new command and control server. Can you break in and see what they are up to?</p>
+</blockquote>
+
+<p>Lại là đăng nhập 👀<br>
+Mới zô phang thử sqlinjection ai ngờ được luôn 🍌🍌
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/carto1.jpg" class="img-responsive">
+- <strong>Payload:</strong> <code>username=admin%27+union+select+1--+-&amp;password=1</code>
+Chall này thư giãn hơn so với cái trước, nhìn vô đoán luôn đc
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/carto2.jpg" class="img-responsive">
+Chuyển <code>Home</code> thành <code>flag</code> là có được flag luôn
+<img src="https://raw.githubusercontent.com/saddean/blogs/master/static/img/hackthebox/carto3.jpg" class="img-responsive"></p>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://saddean.github.io/blogs/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "myblog-wqnng8opme" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-130213932-1', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/saddean.github.io\/blogs\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+  <script src="https://saddean.github.io/blogs//js/App.js"></script>
+  
+</body>
+</html>

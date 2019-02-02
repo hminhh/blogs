@@ -1,0 +1,58 @@
+baseurl = "https://saddean.github.io/blogs/"
+theme = "hugo-geo"
+relativeURLs = false
+publishDir = "docs"
+languageCode = "en-us"
+title = "S4D's Blog"
+disqusShortname = "myblog-wqnng8opme"
+paginate = 5
+enableRobotsTXT = true
+
+[taxonomies]
+	tag = "tags"
+
+[params]
+	
+	showglobe = true
+
+	favicon = "icon.ico"
+	
+	analytics = "UA-130213932-1"
+
+
+	profilepic = "img/profile.jpg"
+	
+	title = "$4D"
+
+	header = "🕵️‍♂️Những thứ tôi đã nghĩ:"
+
+	subtitle = "🚀 Người đi ra ngoài vũ trụ 🚀"
+
+	highlight = true
+	# Social buttons for sidebar
+	# Each of these are optional
+	[[params.socialbuttons]]
+	faicon = "github"
+	url = "https://github.com/saddean"
+	[[params.socialbuttons]]
+	faicon = "twitter"
+	url = "https://twitter.com/ttuongann"
+	[[params.socialbuttons]]
+	faicon = "facebook"
+	url = "https://facebook.com/ttuongann"
+
+	[[params.navlinks]]
+	name = "About"
+	url = "about"
+	
+	[[params.navlinks]]
+	name = "Blog"
+	url = ""
+	
+	[[params.navlinks]]
+	name = "Category"
+	url = "tags/"
+
+	css = [
+	"//cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"
+	]

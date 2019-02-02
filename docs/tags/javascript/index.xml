@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on S4D&#39;s Blog</title>
+    <link>https://saddean.github.io/blogs/tags/javascript/</link>
+    <description>Recent content in Javascript on S4D&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Jan 2019 18:26:14 +0700</lastBuildDate>
+    
+	<atom:link href="https://saddean.github.io/blogs/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[JS] Loop Synchronous JS - Tạo Vòng lặp đồng bộ trong JS</title>
+      <link>https://saddean.github.io/blogs/post/loop-synchronous-js/</link>
+      <pubDate>Thu, 24 Jan 2019 18:26:14 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/loop-synchronous-js/</guid>
+      <description>1.Vòng lặp bất đồng bộ Đây là vấn đề muôn thưở cho ai code JS, đặt vấn đề với trường hợp sau đây:
+ Trường hợp này, vòng lặp sẽ được chạy setTimeOut với time ngẫu nhiên và tất nhiên kết quả trả về không theo thứ tự của vòng lặp(0-9) 😊. Đây là một cách để JS xử lí nhanh hơn các ngôn ngữ khác, tuy nhiên ở một số trường hợp bạn cần dữ liệu được loop theo một cách đồng bộ thì lại khá bất tiện.</description>
+    </item>
+    
+    <item>
+      <title>[JS] Shallow Copy &amp; Deep Copy Trong JavaScript</title>
+      <link>https://saddean.github.io/blogs/post/shallow-deep-copy-js/</link>
+      <pubDate>Sun, 30 Dec 2018 21:11:04 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/shallow-deep-copy-js/</guid>
+      <description>1.Giới thiệu  Javascript luôn có những điều kì lạ so với các ngôn ngữ khác. Object là kiểu đối tượng của JS và ai học JS cũng phải làm việc rất nhiều với nó, Object có thể chứa các thuộc tính, hàm ,&amp;hellip; Hầu hết tất cả các đối tượng trong JS đều có kiểu là Object (Array là một ví dụ).
+ Tuy nhiên khi thao tác với Object về việc copy thì gặp phải một vài vấn đề rắc rối , đó là shallow copy và deep copy.</description>
+    </item>
+    
+  </channel>
+</rss>

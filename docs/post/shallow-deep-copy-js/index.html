@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content="[JS] Shallow Copy &amp; Deep Copy Trong JavaScript">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2018-12-30">
+    
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://saddean.github.io/blogs/post/shallow-deep-copy-js/">
+    <meta property="og:site_name" content="S4D&#39;s Blog">
+    
+    <meta property="og:tags" content="javascript">
+    
+    <meta name="generator" content="Hugo 0.52" />
+    <title>[JS] Shallow Copy &amp; Deep Copy Trong JavaScript &middot; S4D&#39;s Blog</title>
+    
+    <link rel="stylesheet" href="https://saddean.github.io/blogs/css/monokai-sublime.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://saddean.github.io/blogs/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    
+    <link href="https://saddean.github.io/blogs/index.xml" rel="alternate" type="application/rss+xml" title="S4D&#39;s Blog" />
+    
+    
+    <link rel="icon" href="https://saddean.github.io/blogs/icon.ico" />
+    
+
+    
+    
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://saddean.github.io/blogs/">$4D</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://saddean.github.io/blogs/about">About</a></li>
+				
+					<li><a href="https://saddean.github.io/blogs/">Blog</a></li>
+				
+					<li><a href="https://saddean.github.io/blogs/tags/">Category</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-2 col-md-2">
+	<div id="menu-content" class="vertical-align">
+		
+			<h2 class="text-center rainbox-text shake-opacity"><a href="https://saddean.github.io/blogs/">$4D</a></h2>
+		
+		
+		
+			<small class="text-center center-block">🚀 Người đi ra ngoài vũ trụ 🚀</small>
+		
+		
+		
+			<img id="profile-pic" src="https://saddean.github.io/blogs//img/profile.jpg" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			
+				<a href="https://github.com/saddean"><i class="shake-opacity fa fa-github fa-3x"></i></a>
+			
+				<a href="https://twitter.com/ttuongann"><i class="shake-opacity fa fa-twitter fa-3x"></i></a>
+			
+				<a href="https://facebook.com/ttuongann"><i class="shake-opacity fa fa-facebook fa-3x"></i></a>
+			
+
+			
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://saddean.github.io/blogs/about">About</a>
+			
+				<a href="https://saddean.github.io/blogs/">Blog</a>
+			
+				<a href="https://saddean.github.io/blogs/tags/">Category</a>
+			
+		</div>
+	</div>
+</div>
+
+		<div id="content" class="col-xs-12 col-sm-8 col-md-10">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-9">
+
+<main>
+	<header>
+		<h1 class="title-h1">[JS] Shallow Copy &amp; Deep Copy Trong JavaScript</h1>
+		<div>
+			Published on: <i class="hg-muted">30 December 2018</i>
+		</div>
+		<div>
+			<i>Tags:</i>
+			<small class="text-muted">
+				
+				
+				<a href="https://saddean.github.io/blogs/tags/javascript"><span class="label btn-warning shake-opacity">javascript</span></a>
+				
+			</small>
+		</div>
+	</header>
+
+	<article>
+		
+
+<hr />
+
+<h1 id="1-giới-thiệu">1.Giới thiệu</h1>
+
+<blockquote>
+<p>Javascript luôn có những điều kì lạ so với các ngôn ngữ khác. <code>Object</code> là kiểu đối tượng của JS và ai học JS cũng phải làm việc rất nhiều với nó,
+<code>Object</code> có thể chứa các thuộc tính, hàm ,&hellip; Hầu hết tất cả các đối tượng trong JS đều có kiểu là <code>Object</code> (<code>Array</code> là một ví dụ).</p>
+</blockquote>
+
+<p>Tuy nhiên khi thao tác với <code>Object</code> về việc copy thì gặp phải một vài vấn đề rắc rối , đó là <code>shallow copy</code> và <code>deep copy</code>.Những sử dụng các toán tử gán (<code>=</code>), nó không tạo ra
+một object mới mà nó chỉ trỏ đến tham chiếu đến địa chỉ cho biến gán&hellip;.Hmm nói nghe khó hiểu nhỉ:</p>
+
+<pre><code class="language-javascript">    let hacker ={
+        OS : &quot;Kali Linux&quot;,
+        Skill : &quot;Rip Facebook&quot;,
+        AGE : 10
+    }
+
+ // lúc này hackerClone chỉ trỏ đến địa chỉ của hacker chứ không tạo ra một object mới
+    let hackerClone = hacker;       
+
+    hackerClone.AGE = 100;
+
+    console.log(hacker.AGE)                 //100
+    console.log(hackerClone.AGE)            //100
+
+</code></pre>
+
+<h1 id="2-một-vài-cách-copy-object-trong-js">2.Một vài cách copy object trong JS</h1>
+
+<p><strong>1. Loop</strong></p>
+
+<p>Cách này thuần cơ là tự viết hàm để có thể sao chép object ban đầu thành một object mới</p>
+
+<pre><code class="language-javascript">    function clone(obj) {
+        if (null == obj || &quot;object&quot; != typeof obj) return obj;
+        var copy = obj.constructor();
+        for (var attr in obj) {
+            if (obj.hasOwnProperty(attr)) copy[attr] = obj[attr];
+        }
+        return copy;
+    }
+</code></pre>
+
+<p><strong>2. Object.assign</strong></p>
+
+<p>Bạn có thể xem chi tiết về <code>Object.asign</code> tại <a href="https://developer.mozilla.org/vi/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">đây</a></p>
+
+<pre><code class="language-javascript">    let hacker ={
+        OS : &quot;Kali Linux&quot;,
+        Skill : &quot;Rip Facebook&quot;,
+        AGE : 10
+    }
+
+    let hackerClone = Object.assign({},hacker)  
+
+    hackerClone.AGE = 100;
+
+    console.log(hacker.AGE)                 //10
+    console.log(hackerClone.AGE)            //100
+</code></pre>
+
+<p><strong>3. Spread operator</strong></p>
+
+<p>ES6 là một thứ tuyệt vời mà JS mang lại , ES6 hỗ trợ &ldquo;Toán tử 3 chấm&rdquo;  để copy đơn giản nhất có thể</p>
+
+<pre><code class="language-javascript">    let hacker ={
+        OS : &quot;Kali Linux&quot;,
+        Skill : &quot;Rip Facebook&quot;,
+        AGE : 10
+    }
+
+    let hackerClone = {...hacker}    
+
+    hackerClone.AGE = 100;
+
+    console.log(hacker.AGE)                 //10
+    console.log(hackerClone.AGE)            //100
+</code></pre>
+
+<h1 id="3-vấn-đề-bắt-đầu">3.Vấn đề bắt đầu 🌋</h1>
+
+<p>Vậy shallow copy , deep copy là gì ?????? Mình sẽ bắt đầu bằng một ví dụ sau :</p>
+
+<pre><code class="language-javascript">    let hacker ={
+        OS : &quot;Kali Linux&quot;,
+        Skill : &quot;Rip Facebook&quot;,
+        AGE : 10,
+		GirlFriends : {
+			girl1 : &quot;Cháu gái nắng&quot;,
+			girl2 : &quot;Em gái mưa&quot;
+		}
+    }
+
+    let hackerClone = {...hacker}
+    // let hackerClone = Object.assigin({},hacker)
+
+    hackerClone.GirlFriends.girl1 = &quot;Bà Còng&quot;;
+
+    console.log(hacker.GirlFriends.girl1)                 //Bà Còng
+    console.log(hackerClone.GirlFriends.girl1)            //Bà Còng
+</code></pre>
+
+<p>Ủa chuyện gì xảy ra ở đây vậy , sao hai Object trên lại cùng thay đổi giá trị 😂.Giải thích đơn giản thì đây chính là bẫy đặt ra
+trong shallow copy.Tuy đối tượng <code>hackerClone</code> đã ko còn tham chiếu đến <code>hacker</code> , tuy nhiên khi có 1 đối tượng lồng trong 1 đối tượng
+khác thì đối tượng con này vẫn tham chiếu đến Object ban đầu. Cụ thể <code>hackerClone.GirlFriends</code> đang tham chiếu đến <code>hacker.GirlFriends</code> 👏👏
+Và đây chính là <code>shallow copy</code></p>
+
+<h1 id="4-giải-quyết-vấn-đề">4.Giải quyết vấn đề</h1>
+
+<p>Sử dụng <code>Deep Copy</code>, đây là hình thức copy giá trị biến đến vùng nhớ khác và cắt đứt mọi quan hệ với biến cũ.Trong JS sử dụng thủ thuật</p>
+
+<blockquote>
+<p><code>JSON.parse(JSON.stringify(object));</code></p>
+</blockquote>
+
+<pre><code class="language-javascript">    let hacker ={
+        OS : &quot;Kali Linux&quot;,
+        Skill : &quot;Rip Facebook&quot;,
+        AGE : 10,
+		GirlFriends : {
+			girl1 : &quot;Cháu gái nắng&quot;,
+			girl2 : &quot;Em gái mưa&quot;,
+			haveGirl : true
+		}
+    }
+
+    let hackerClone = JSON.parse(JSON.stringify(hacker))
+
+    hackerClone.GirlFriends.girl1 = &quot;Bà Còng&quot;;
+
+    console.log(hacker.GirlFriends.girl1)                 //Cháu gái nắng
+    console.log(hackerClone.GirlFriends.girl1)            //Bà Còng
+</code></pre>
+
+<p>Tuy nhiên =))) sử dụng cách này thì bạn không thể copy những <code>method</code> của thuộc tính trong Object 🤣🤣 Ôi JavaScript thật tuyệt zờiiiiiiiii
+Vậy <code>&quot;WHAT IS GOOD WAY TO COPY OBJECT IN JAVASCRIPT??&quot;</code>. Vấn đề này khá ngặt nghèo, tuy nhiên mình sẽ để lại link cho các bạn tham khảo, mình sẽ trình bày
+ở các bài viết tiếp theo
+<a href="https://stackoverflow.com/questions/728360/how-do-i-correctly-clone-a-javascript-object?answertab=active#tab-top">https://stackoverflow.com/questions/728360/how-do-i-correctly-clone-a-javascript-object?answertab=active#tab-top</a></p>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://saddean.github.io/blogs/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "myblog-wqnng8opme" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-130213932-1', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/saddean.github.io\/blogs\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+  <script src="https://saddean.github.io/blogs//js/App.js"></script>
+  
+</body>
+</html>

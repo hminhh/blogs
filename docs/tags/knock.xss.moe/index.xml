@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Knock.xss.moe on S4D&#39;s Blog</title>
+    <link>https://saddean.github.io/blogs/tags/knock.xss.moe/</link>
+    <description>Recent content in Knock.xss.moe on S4D&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Jan 2019 18:04:50 +0700</lastBuildDate>
+    
+	<atom:link href="https://saddean.github.io/blogs/tags/knock.xss.moe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[knock.xss.moe] XSS CHALLENGE</title>
+      <link>https://saddean.github.io/blogs/post/knock-xss/</link>
+      <pubDate>Sun, 06 Jan 2019 18:04:50 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/knock-xss/</guid>
+      <description>XSS:
+Cross-Site Scripting (XSS) là một trong những kĩ thuật tấn công phổ biến nhất hiên nay, đồng thời nó cũng là một trong những vấn đề bảo mật quan trọng đối với các nhà phát triển web và cả những người sử dụng web. Bất kì một website nào cho phép người sử dụng đăng thông tin mà không có sự kiểm tra chặt chẽ các đoạn mã nguy hiểm thì đều có thể tiềm ẩn các lỗi XSS.</description>
+    </item>
+    
+  </channel>
+</rss>

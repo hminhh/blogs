@@ -1,0 +1,34 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+<main>
+	<header>
+		<h1 class="title-h1">{{ .Title }}</h1>
+		<div>
+			Published on: <i class="hg-muted">{{ .Date.Format "2 January 2006" }}</i>
+		</div>
+		<div>
+			<i>Tags:</i>
+			<small class="text-muted">
+				{{ $base := .Site.BaseURL }}
+				{{ range $tag := .Params.tags }}
+				<a href="{{ $base }}tags/{{ $tag | urlize }}"><span class="label btn-warning shake-opacity">{{ . }}</span></a>
+				{{ end }}
+			</small>
+		</div>
+	</header>
+
+	<article>
+		{{ .Content }}
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" {{ .Site.BaseURL }}" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+{{ if .Site.DisqusShortname }}
+{{ template "_internal/disqus.html" . }}
+{{ end }}
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackthebox.eu on S4D&#39;s Blog</title>
+    <link>https://saddean.github.io/blogs/tags/hackthebox.eu/</link>
+    <description>Recent content in Hackthebox.eu on S4D&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Jan 2019 09:13:54 +0700</lastBuildDate>
+    
+	<atom:link href="https://saddean.github.io/blogs/tags/hackthebox.eu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[hackthebox.eu] Hackthebox Invite Code</title>
+      <link>https://saddean.github.io/blogs/post/hackthebox-invite-code/</link>
+      <pubDate>Sat, 19 Jan 2019 09:13:54 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/hackthebox-invite-code/</guid>
+      <description>Một số cty nước ngoài kiếm email phỏng vấn cũng bằng cách này, thường chỉ khai thác ở client , nên cứ bem theo view-source mà chơi thôi 🤞Tuy vậy HTB có một vài thủ thuật gài (mặc dù k đáng kể) như để canvas để chuột phải ko thể view-source hoặc view-source được thì đã minify cho xấu đi =)))
+Có hai file JS đáng nghi vấn, mở lên xem thử:</description>
+    </item>
+    
+    <item>
+      <title>[hackthebox.eu] Web Challenge</title>
+      <link>https://saddean.github.io/blogs/post/hackthebox-web-challege/</link>
+      <pubDate>Tue, 15 Jan 2019 20:02:08 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/hackthebox-web-challege/</guid>
+      <description>#.LIST OF CHALLAGE    ID Challgenge Done     1 [30 Points] HDC ✅   2 [50 Points] I know Mag1k ✅   3 [70 Points] Grammar ✅   4 [20 Points] Lernaean ✅   5 [30 Points] Cartographer ✅    
+1.HDC [by Thiseas]  Description : We believe a certain individual uses this website for shady business. Can you find out who that is and send him an email to check, using the web site&amp;rsquo;s functionality?</description>
+    </item>
+    
+  </channel>
+</rss>

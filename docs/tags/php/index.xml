@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on S4D&#39;s Blog</title>
+    <link>https://saddean.github.io/blogs/tags/php/</link>
+    <description>Recent content in Php on S4D&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Jan 2019 20:02:08 +0700</lastBuildDate>
+    
+	<atom:link href="https://saddean.github.io/blogs/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[root-me.org] PHP type juggling - PHP Loose Comparison </title>
+      <link>https://saddean.github.io/blogs/post/php-compare-magic/</link>
+      <pubDate>Wed, 30 Jan 2019 20:02:08 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/php-compare-magic/</guid>
+      <description>LIST OF CHALLGENGE    ID Challgenge Done     1 PHP - Loose Comparison ✅   2 PHP type juggling ✅    Note: Books
+
+PHP - Loose Comparison  Link: http://challenge01.root-me.org/web-serveur/ch55/ Challenge: Bypass authentication with sourcecode Giải thích: Đề bài sẽ cho sẵn source code, nhập vài 2 input seed và hash. Input seed chỉ nhận kí tự a-Z và 0-9, hash cũng tương tự Đề bài tăng độ khó bằng cách ngẫu nhiên tạo số random và gắn sau seed  if($s !</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rootme on S4D&#39;s Blog</title>
+    <link>https://saddean.github.io/blogs/tags/rootme/</link>
+    <description>Recent content in Rootme on S4D&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Dec 2018 09:30:14 +0700</lastBuildDate>
+    
+	<atom:link href="https://saddean.github.io/blogs/tags/rootme/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[root-me.org] XSS CHALLENGE</title>
+      <link>https://saddean.github.io/blogs/post/rootme-xss/</link>
+      <pubDate>Tue, 04 Dec 2018 09:30:14 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/rootme-xss/</guid>
+      <description>LIST OF CHALLGENGE    ID Challgenge Done     1 XSS - Stored 1 ✅   2 XSS - Stored 2 ✅   3 XSS - Reflected ✅   4 XSS - Stored - filter bypass ❌   5 XSS - DOM Based ❌    
+XSS - Stored 1  Link : http://challenge01.root-me.org/web-client/ch18/ Vulnerablity : Input Message Payload : &amp;lt;img src=0 onerror=document.</description>
+    </item>
+    
+  </channel>
+</rss>

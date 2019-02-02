@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>S4D&#39;s Blog</title>
+    <link>https://saddean.github.io/blogs/</link>
+    <description>Recent content on S4D&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Jan 2019 20:02:08 +0700</lastBuildDate>
+    
+	<atom:link href="https://saddean.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[root-me.org] PHP type juggling - PHP Loose Comparison </title>
+      <link>https://saddean.github.io/blogs/post/php-compare-magic/</link>
+      <pubDate>Wed, 30 Jan 2019 20:02:08 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/php-compare-magic/</guid>
+      <description>LIST OF CHALLGENGE    ID Challgenge Done     1 PHP - Loose Comparison ✅   2 PHP type juggling ✅    Note: Books
+
+PHP - Loose Comparison  Link: http://challenge01.root-me.org/web-serveur/ch55/ Challenge: Bypass authentication with sourcecode Giải thích: Đề bài sẽ cho sẵn source code, nhập vài 2 input seed và hash. Input seed chỉ nhận kí tự a-Z và 0-9, hash cũng tương tự Đề bài tăng độ khó bằng cách ngẫu nhiên tạo số random và gắn sau seed  if($s !</description>
+    </item>
+    
+    <item>
+      <title>[JS] Loop Synchronous JS - Tạo Vòng lặp đồng bộ trong JS</title>
+      <link>https://saddean.github.io/blogs/post/loop-synchronous-js/</link>
+      <pubDate>Thu, 24 Jan 2019 18:26:14 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/loop-synchronous-js/</guid>
+      <description>1.Vòng lặp bất đồng bộ Đây là vấn đề muôn thưở cho ai code JS, đặt vấn đề với trường hợp sau đây:
+ Trường hợp này, vòng lặp sẽ được chạy setTimeOut với time ngẫu nhiên và tất nhiên kết quả trả về không theo thứ tự của vòng lặp(0-9) 😊. Đây là một cách để JS xử lí nhanh hơn các ngôn ngữ khác, tuy nhiên ở một số trường hợp bạn cần dữ liệu được loop theo một cách đồng bộ thì lại khá bất tiện.</description>
+    </item>
+    
+    <item>
+      <title>[hackthebox.eu] Hackthebox Invite Code</title>
+      <link>https://saddean.github.io/blogs/post/hackthebox-invite-code/</link>
+      <pubDate>Sat, 19 Jan 2019 09:13:54 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/hackthebox-invite-code/</guid>
+      <description>Một số cty nước ngoài kiếm email phỏng vấn cũng bằng cách này, thường chỉ khai thác ở client , nên cứ bem theo view-source mà chơi thôi 🤞Tuy vậy HTB có một vài thủ thuật gài (mặc dù k đáng kể) như để canvas để chuột phải ko thể view-source hoặc view-source được thì đã minify cho xấu đi =)))
+Có hai file JS đáng nghi vấn, mở lên xem thử:</description>
+    </item>
+    
+    <item>
+      <title>[hackthebox.eu] Web Challenge</title>
+      <link>https://saddean.github.io/blogs/post/hackthebox-web-challege/</link>
+      <pubDate>Tue, 15 Jan 2019 20:02:08 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/hackthebox-web-challege/</guid>
+      <description>#.LIST OF CHALLAGE    ID Challgenge Done     1 [30 Points] HDC ✅   2 [50 Points] I know Mag1k ✅   3 [70 Points] Grammar ✅   4 [20 Points] Lernaean ✅   5 [30 Points] Cartographer ✅    
+1.HDC [by Thiseas]  Description : We believe a certain individual uses this website for shady business. Can you find out who that is and send him an email to check, using the web site&amp;rsquo;s functionality?</description>
+    </item>
+    
+    <item>
+      <title>[knock.xss.moe] XSS CHALLENGE</title>
+      <link>https://saddean.github.io/blogs/post/knock-xss/</link>
+      <pubDate>Sun, 06 Jan 2019 18:04:50 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/knock-xss/</guid>
+      <description>XSS:
+Cross-Site Scripting (XSS) là một trong những kĩ thuật tấn công phổ biến nhất hiên nay, đồng thời nó cũng là một trong những vấn đề bảo mật quan trọng đối với các nhà phát triển web và cả những người sử dụng web. Bất kì một website nào cho phép người sử dụng đăng thông tin mà không có sự kiểm tra chặt chẽ các đoạn mã nguy hiểm thì đều có thể tiềm ẩn các lỗi XSS.</description>
+    </item>
+    
+    <item>
+      <title>[JS] Shallow Copy &amp; Deep Copy Trong JavaScript</title>
+      <link>https://saddean.github.io/blogs/post/shallow-deep-copy-js/</link>
+      <pubDate>Sun, 30 Dec 2018 21:11:04 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/shallow-deep-copy-js/</guid>
+      <description>1.Giới thiệu  Javascript luôn có những điều kì lạ so với các ngôn ngữ khác. Object là kiểu đối tượng của JS và ai học JS cũng phải làm việc rất nhiều với nó, Object có thể chứa các thuộc tính, hàm ,&amp;hellip; Hầu hết tất cả các đối tượng trong JS đều có kiểu là Object (Array là một ví dụ).
+ Tuy nhiên khi thao tác với Object về việc copy thì gặp phải một vài vấn đề rắc rối , đó là shallow copy và deep copy.</description>
+    </item>
+    
+    <item>
+      <title>About page</title>
+      <link>https://saddean.github.io/blogs/about/</link>
+      <pubDate>Tue, 04 Dec 2018 09:30:14 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/about/</guid>
+      <description>____ _ _ ____ / ___|| || | | _ \ \___ \| || |_| | | | ___) |__ _| |_| | |____/ |_| |____/   const saddean🕵️‍♂️ = { NAME👶 :&#34;TTAn&#34;, EDUCATION👨‍🎓:{ At :&#34;ACADEMY OF CRYPTOGRAPHY TECHNIQUES&#34;, Time :&#34;2015-2020&#34;, Major :&#34;Security Engineer&#34; }, SKILL🏹:{ HTML+CSS : [###### ], JavaScript : [######### ], NodeJS : [######## ], PHP : [##### ], ReactJS : [####### ], Network Security : [#### ], Web Secruity  : [######## ] }, HOBBY🙉:{ Game : TRUE, CTF : TRUE Football : TRUE, } }  </description>
+    </item>
+    
+    <item>
+      <title>[root-me.org] XSS CHALLENGE</title>
+      <link>https://saddean.github.io/blogs/post/rootme-xss/</link>
+      <pubDate>Tue, 04 Dec 2018 09:30:14 +0700</pubDate>
+      
+      <guid>https://saddean.github.io/blogs/post/rootme-xss/</guid>
+      <description>LIST OF CHALLGENGE    ID Challgenge Done     1 XSS - Stored 1 ✅   2 XSS - Stored 2 ✅   3 XSS - Reflected ✅   4 XSS - Stored - filter bypass ❌   5 XSS - DOM Based ❌    
+XSS - Stored 1  Link : http://challenge01.root-me.org/web-client/ch18/ Vulnerablity : Input Message Payload : &amp;lt;img src=0 onerror=document.</description>
+    </item>
+    
+  </channel>
+</rss>
